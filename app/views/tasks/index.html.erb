@@ -1,0 +1,11 @@
+<h1>My tasks 📝</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+    <%= link_to task.name, task_path(task.id) %>
+    </li>
+  <% end %>
+</ul>
+<h2>Add a new task</h2>
+
+<%= render 'form', task: @task %>
